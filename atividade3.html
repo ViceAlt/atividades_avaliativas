@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>温度変換器 (Conversor de Temperatura)</h1>
+    <button type="button" onclick="converterCelsiusParaFahrenheit()">
+        摂氏から華氏</button>
+    <button type="button" onclick="converterFahrenheitParaCelsius()">
+        華氏から摂氏へ</button>
+        <div id="resultado"></div>
+
+    <script>
+        function converterCelsiusParaFahrenheit(){
+            let celsius = parseFloat(prompt("Digita a temperatura em Celsius: "));
+            let fahrenheit = (celsius * ( 9 / 5)) + 32;
+            document.getElementById("resultado").innerHTML = `
+            ${celsius}° Celsius equivalem a ${fahrenheit.toFixed(2)} Fahrenheit
+            `;
+
+        }
+        function converterFahrenheitParaCelsius(){
+            let fahrenheit = parseFloat(prompt("Digita a temperatura em fahrenheit: "));
+            let celsius = (fahrenheit - 32) * ( 5 / 9 );
+            document.getElementById("resultado").innerHTML = `
+            ${fahrenheit}° fehrentheit equivalem a ${celsius.toFixed(2)} celsius
+            `;
+
+        }
+    </script>
+</body>
+</html>

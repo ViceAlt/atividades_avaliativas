@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Caracters</title>
+</head>
+<body>
+    <h1>Ordernar Caracteres</h1>
+    <button type="button" onclick="ordernarCaracteres()">注文(Ordenar)</button>
+    <div id="resultados"></div>
+
+    <script>
+        function ordernarCaracteres(){
+            let caracteres = [];
+            for (let i = 0; i < 5; i++){
+                caracteres.push(prompt(`Digite o caractere ${ i + 1 }:`));
+            }
+            caracteres.sort();
+            document.getElementById("resultados").innerHTML = 
+            ` 順序付けられたシーケンス (Sequência ordenada): ${caracteres.join(",")}
+            `;
+        }
+    </script>
+</body>
+</html>
